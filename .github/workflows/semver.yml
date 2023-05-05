@@ -20,7 +20,7 @@ jobs:
       published_version_patch: ${{ steps.release.outputs.published_version_patch }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
@@ -37,7 +37,7 @@ jobs:
       packages: write
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Build Image
