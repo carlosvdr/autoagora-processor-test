@@ -28,6 +28,10 @@ jobs:
       uses: relekang/python-semantic-release@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Print Published Value
+      run: |
+        echo "Published Value: ${{ steps.release.outputs.published }}"
+        echo "Published Version: ${{ steps.release.outputs.published_version }}"
 
   container_build:
     runs-on: ubuntu-latest
