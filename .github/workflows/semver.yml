@@ -32,6 +32,9 @@ jobs:
       run: |
         echo "Published Value: ${{ steps.release.outputs.published }}"
         echo "Published Version: ${{ steps.release.outputs.published_version }}"
+        echo "Published Version MAJOR: ${{ steps.release.outputs.published_version_major }}"
+        echo "Published Version MINOR: ${{ steps.release.outputs.published_version_minor }}"
+        echo "Published Version PATCH: ${{ steps.release.outputs.published_version_patch }}"
 
   container_build:
     runs-on: ubuntu-latest
